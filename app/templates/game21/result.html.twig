@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Game 21{% endblock %}
+
+{% block content %}
+<h1>{{ header }}</h1>
+
+<p>{{ message }}</p>
+
+<p>Your total: {{ getPlayerTotal }}</p>
+<p>Bot total: {{ getBotTotal }}</p>
+
+<p>{{ getFinalResults }}</p>
+
+<h2>Scoreboard</h2>
+<p>Total rounds: {{ getWins + getLosses }}</p>
+<p>You have won {{ getWins }} times.</p>
+<p>Bot has won {{ getLosses }} times.</p>
+
+<p>
+    <button><a href="{{ path('game21') }}">Play another round</a></button>
+</p>
+<p>
+    <button><a href="{{ path('game21_restart') }}">Reset scoreboard</a></button>
+</p>
+{% endblock %}

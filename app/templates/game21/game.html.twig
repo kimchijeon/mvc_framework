@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Game 21{% endblock %}
+
+{% block content %}
+<h1>{{ header }}</h1>
+
+<p>{{ message }}</p>
+
+<p>You rolled and got:</p>
+<div class="dice-utf8">
+    {% for value in lastRoll %}
+    <div class="dice-{{ value }}"></div>
+    {% endfor %}
+</div>
+
+<p>Current total: {{ sumDice }}</p>
+
+<p>{{ notice }} </p>
+<p>
+    <form method="post" action="{{ path('game21_play') }}">
+        <input type="submit" name="submit" value="Roll dice">
+    </form>
+</p>
+<p>
+    <form method="post" action="{{ path('game21_bot_process') }}">
+        <input type="hidden" name="playerdice" value="{{ sumDice }}">
+        <input type="submit" name="submit" value="Stop rolling">
+    </form>
+</p>
+<p>
+    <button><a href="{{ path('game21') }}">Restart</a></button>
+</p>
+{% endblock %}

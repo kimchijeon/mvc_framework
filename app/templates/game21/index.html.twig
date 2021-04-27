@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Game 21{% endblock %}
+
+{% block content %}
+<h1>{{ header }}</h1>
+
+<p>{{ message }}</p>
+
+<form method="post" action="{{ path('game21_process') }}">
+    <label>How many dice do you want to play with?</label>
+    <select required name="number">
+        <option value="0">1</option>
+        <option value="1">2</option>
+    </select>
+
+    <input type="submit" name="submit" value="Play!">
+</form>
+{% endblock %}

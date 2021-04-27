@@ -1,0 +1,59 @@
+body {
+    overflow-y: scroll;
+    width: 800px;
+    margin: 8px auto;
+    padding-left: 1em;
+    border-left: 1px solid #ccc;
+}
+
+main {
+    min-height: 20em;
+}
+
+/**
+* Style a dice using UTF-8 characters.
+*/
+.dice-utf8 .dice-1::after { content: "\2680"; }
+.dice-utf8 .dice-2::after { content: "\2681"; }
+.dice-utf8 .dice-3::after { content: "\2682"; }
+.dice-utf8 .dice-4::after { content: "\2683"; }
+.dice-utf8 .dice-5::after { content: "\2684"; }
+.dice-utf8 .dice-6::after { content: "\2685"; }
+
+.dice-utf8 {
+    font-size: 32px;
+}
+
+
+table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    min-width: 500px;
+}
+
+th {
+    padding: 5px;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    text-align: center;
+    border-right: 1px solid white;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+td a:hover {
+    color: white;
+}
+
+tr:hover {
+    background-color: rgba(62, 62, 62, 0.3);
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    min-height: 4em;
+    text-align: center;
+}

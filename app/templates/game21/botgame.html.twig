@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Game 21{% endblock %}
+
+{% block content %}
+<h1>{{ header }}</h1>
+
+<p>{{ message }}</p>
+
+<p>Your total: {{ getPlayerTotal }}</p>
+
+<p>
+    <form method="post" action="{{ path('game21_bot_play') }}">
+        <input type="submit" name="submit" value="Let bot play">
+    </form>
+</p>
+{% endblock %}
