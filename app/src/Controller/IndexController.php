@@ -16,7 +16,7 @@ class IndexController extends AbstractController
     {
         $session = new Session();
         $session->start();
-    
+
         $data = [
             "header" => "Index Page",
             "message" => "Hello, this is the index page, rendered as a layout.",

@@ -32,7 +32,7 @@ class Game
         $diceHand = new Dicehand();
 
         $number = $session->get("number");
-    
+
         if (isset($number)) {
             $diceHand->setNumber($number);
         }
@@ -48,10 +48,10 @@ class Game
 
         if (!isset($dicetotal)) {
             $session->set("dicetotal", $dicehandSum);
-        } elseif (isset($dicetotal)) {
-            $dicetotal = $dicehandSum + $dicetotal;
-            $session->set("dicetotal", $dicetotal);
         }
+
+        $dicetotal = $dicehandSum + $dicetotal;
+        $session->set("dicetotal", $dicetotal);
     }
 
     public function savePlayerTotal(Request $request): void
@@ -69,7 +69,7 @@ class Game
     public function prepareBotGame(Request $request): array
     {
         $session = $request->getSession();
-    
+
         $data = [
             "header" => "Let's play 21",
             "message" => "It's the bot's turn to play. Who will win?",
