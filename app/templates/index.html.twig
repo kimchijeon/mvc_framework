@@ -3,8 +3,14 @@
 {% block title %}Index{% endblock %}
 
 {% block content %}
-<h1>{{ header }}</h1>
+<h1>Welcome to this page!</h1>
 
-<p>{{ message }}</p>
+<p>This website was made for course <a href="https://dbwebb.se/kurser/mvc-v1">dbwebb-mvc</a> in April 2021 using Symfony.</p>
 
+<h2>What would you like to do today?</h2>
+<ul>
+    <li><a href="{{ path('session') }}">Session Management</a></li>
+    <li><a href="{{ path('game21') }}">Play Game 21</a></li>
+    <li><a href="{{ path('yatzy') }}">Play Yatzy</a></li>
+</ul>
 {% endblock %}
