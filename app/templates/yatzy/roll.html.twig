@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Yatzy{% endblock %}
+
+{% block content %}
+<h1>{{ header }}</h1>
+
+<p>{{ message }}</p>
+
+<h2>Currently playing round {{ round }}.</h2>
+
+<p>You rolled and got:</p>
+<div class="dice-utf8">
+    {% for value in lastRoll %}
+    <div class="dice-{{ value }}"></div>
+    {% endfor %}
+</div>
+
+<p>Current total: <b>{{ sumValues }}</b></p>
+
+{% block postroll %}{% endblock %}
+
+{% endblock %}

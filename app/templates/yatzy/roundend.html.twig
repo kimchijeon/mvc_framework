@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Yatzy{% endblock %}
+
+{% block content %}
+<h1>{{ header }}</h1>
+
+<p>{{ message }}</p>
+
+<table>
+    <tr>
+      <th>Row</th>
+      <th>Points</th>
+    </tr>
+    <tr>
+      <td>Ones</td>
+      <td>{{ sumOnes }}</td>
+    </tr>
+    <tr>
+      <td>Twos</td>
+      <td>{{ sumTwos }}</td>
+    </tr>
+    <tr>
+      <td>Threes</td>
+      <td>{{ sumThrees }}</td>
+    </tr>
+    <tr>
+      <td>Fours</td>
+      <td>{{ sumFours }}</td>
+    </tr>
+    <tr>
+      <td>Fives</td>
+      <td>{{ sumFives }}</td>
+    </tr>
+    <tr>
+      <td>Sixes</td>
+      <td>{{ sumSixes }}</td>
+    </tr>
+    <tr>
+      <td><b>Sum:</b></td>
+      <td>{{ sumDice }}</td>
+    </tr>
+    <tr>
+      <td><b>Bonus:</b></td>
+      <td>
+        {% if sumDice >= 63 %}
+            {% set bonus = 50 %}
+            {{ bonus }}
+        {% else %}
+            {% set bonus = 0 %}
+            {{ bonus }}
+        {% endif %}
+      </td>
+    </tr>
+    <tr>
+      <td><b>Total:</b></td>
+      <td>{{ sumDice + bonus }}</td>
+    </tr>
+</table>
+  
+<h2>Round ended.</h2>
+<form method="post" action="{{ path('yatzy_process')}}">
+    <label>Choose a round you haven't played yet:</label>
+    <select required name="round">
+        <option value="">Choose round</option>
+        <option value="2">Twos</option>
+        <option value="3">Threes</option>
+        <option value="4">Fours</option>
+        <option value="5">Fives</option>
+        <option value="6">Sixes</option>
+    </select>
+    <input type="submit" name="submit" value="Play!">
+</form>
+
+<p>
+    <button><a href="{{ path('yatzy_restart') }}">Reset</a></button>
+</p>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Yatzy{% endblock %}
+
+{% block content %}
+<h1>{{ header }}</h1>
+
+<p>{{ message }}</p>
+
+<h2>Currently playing round <b>{{ round }}</b>.</h2>
+
+<p>
+    <form method="post" action="{{ path('yatzy_roll_1') }}">
+        <input type="submit" name="submit" value="Roll dice">
+    </form>
+</p>
+<p>
+    <button><a href="{{ path('yatzy_restart') }}">Reset</a></button>
+</p>
+
+{% endblock %}

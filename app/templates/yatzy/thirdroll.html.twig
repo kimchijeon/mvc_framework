@@ -1,0 +1,10 @@
+{% extends 'yatzy/roll.html.twig' %}
+
+{% block postroll %}
+<p>
+    <button><a href="{{ path('yatzy_roundend') }}">Show results</a></button>
+</p>
+<p>
+    <button><a href="{{ path('yatzy_restart') }}">Reset</a></button>
+</p>
+{% endblock %}

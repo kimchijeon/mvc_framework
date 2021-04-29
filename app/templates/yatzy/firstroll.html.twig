@@ -1,0 +1,15 @@
+{% extends 'yatzy/roll.html.twig' %}
+
+{% block postroll %}
+<p>
+    <form method="post" action="{{ path('yatzy_roll_2') }}">
+        <input type="submit" name="submit" value="Roll again">
+    </form>
+</p>
+<p>
+    <button><a href="{{ path('yatzy_roundend') }}">Stop rolling</a></button>
+</p>
+<p>
+    <button><a href="{{ path('yatzy_restart') }}">Reset</a></button>
+</p>
+{% endblock %}
