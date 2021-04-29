@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Kimchi\Dice;
+namespace App\Dice;
 
-use Kimchi\Dice\Dice;
-use Kimchi\Dice\Dicehand;
+use App\Dice\Dice;
+use App\Dice\Dicehand;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Request;
 

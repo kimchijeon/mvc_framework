@@ -6,8 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use Kimchi\Dice\Game;
-use Kimchi\Dice\GameResults;
+use App\Dice\Game;
+use App\Dice\GameResults;
 
 class Game21Controller extends AbstractController
 {
