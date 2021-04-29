@@ -1,13 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Sigmar+One&display=swap');
+
 body {
     overflow-y: scroll;
     width: 800px;
     margin: 8px auto;
     padding-left: 1em;
     border-left: 1px solid #ccc;
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(236, 250, 255);
+}
+
+h1 {
+    font-family: 'Sigmar One', cursive;
 }
 
 main {
-    min-height: 20em;
+    padding: 2em;
+    min-height: 40em;
+    background-color: rgb(245, 251, 255);
+    border-radius: 10px;
+}
+
+nav {
+    padding: 1em;
 }
 
 /**
@@ -53,7 +68,7 @@ tr:hover {
 }
 
 footer {
+    margin-top: 1em;
     border-top: 1px solid #ccc;
-    min-height: 4em;
     text-align: center;
 }
