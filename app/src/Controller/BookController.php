@@ -15,6 +15,8 @@ class BookController extends AbstractController
      */
     public function index(EntityManagerInterface $entityManager): Response
     {
+        $data = array();
+
         $data["books"] = $entityManager
             ->getRepository(Book::class)
             ->findAll();
@@ -41,6 +43,6 @@ class BookController extends AbstractController
         // actually executes the queries (i.e. the INSERT query)
         $entityManager->flush();
 
-        return new Response('Saved new book with id '.$book->getId());
+        return new Response('Saved new book with id ' . $book->getId());
     }
 }
