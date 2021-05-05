@@ -9,14 +9,14 @@ namespace App\Functions;
  *
  * @return int
  */
-function sumDiceValue(array $savedDices, int $number): int
+function sumDiceValue(array $saveddices, int $number): int
 {
-    $count = array_keys($savedDices, $number);
+    $count = array_keys($saveddices, $number);
 
     $sum = 0;
 
     foreach ($count as $key) {
-        $sum += $savedDices[$key];
+        $sum += $saveddices[$key];
     }
 
     return $sum;
