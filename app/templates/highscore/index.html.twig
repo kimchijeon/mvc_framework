@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Yatzy Highscore{% endblock %}
+
+{% block content %}
+<h1>Yatzy Highscore</h1>
+<table class="highscore">
+    <tr>
+        <th>Rank</th>
+        <th>Score</th>
+        <th>Username</th>
+        <th>Date</th>
+    </tr>
+    {% for row in highscore %}
+    <tr>
+        <td></td>
+        <td>{{ row.score }}</td>
+        <td>{{ row.name }}</td>
+        <td>{{ row.date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p>
+    <button><a href="{{ path('yatzy_restart') }}">Start new game of Yatzy</a></button>
+</p>
+{% endblock %}
