@@ -1,4 +1,6 @@
-C:\Users\jenny\dbwebb-kurser\mvc\me\framework\app\src\Dice\GameResults.php:55	The method showFinalResults() has a Cyclomatic Complexity of 20. The configured cyclomatic complexity threshold is 10.
-C:\Users\jenny\dbwebb-kurser\mvc\me\framework\app\src\Dice\GameResults.php:55	The method showFinalResults() has an NPath complexity of 672. The configured NPath complexity threshold is 200.
-C:\Users\jenny\dbwebb-kurser\mvc\me\framework\app\src\Kernel.php:14	Avoid assigning values to variables in if clauses and the like (line '22', column '27').
-C:\Users\jenny\dbwebb-kurser\mvc\me\framework\app\src\Kernel.php:27	Avoid assigning values to variables in if clauses and the like (line '34', column '27').
+C:\Users\jenny\dbwebb-kurser\mvc\me\orm\app\src\Dice\GameResults.php:55	The method showFinalResults() has a Cyclomatic Complexity of 20. The configured cyclomatic complexity threshold is 10.
+C:\Users\jenny\dbwebb-kurser\mvc\me\orm\app\src\Dice\GameResults.php:55	The method showFinalResults() has an NPath complexity of 672. The configured NPath complexity threshold is 200.
+C:\Users\jenny\dbwebb-kurser\mvc\me\orm\app\src\Entity\Book.php:18	Avoid variables with short names like $id. Configured minimum length is 3.
+C:\Users\jenny\dbwebb-kurser\mvc\me\orm\app\src\Entity\Highscore.php:18	Avoid variables with short names like $id. Configured minimum length is 3.
+C:\Users\jenny\dbwebb-kurser\mvc\me\orm\app\src\Kernel.php:14	Avoid assigning values to variables in if clauses and the like (line '22', column '27').
+C:\Users\jenny\dbwebb-kurser\mvc\me\orm\app\src\Kernel.php:27	Avoid assigning values to variables in if clauses and the like (line '34', column '27').
