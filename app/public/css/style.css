@@ -67,6 +67,16 @@ tr:hover {
     background-color: rgba(62, 62, 62, 0.3);
 }
 
+.highscore {
+    counter-reset: rowNumber;
+    text-align: center;
+}
+
+.highscore td:first-child:before {
+    counter-increment: rowNumber;
+    content: counter(rowNumber);
+}
+
 footer {
     margin-top: 1em;
     border-top: 1px solid #ccc;
